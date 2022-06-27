@@ -5,13 +5,13 @@ export default {
 </script>
 
 <template>
-    <h4 class="text-xl">
+    <h2 class="text-2xl mb-2">
         <slot />
-    </h4>
+    </h2>
 </template>
 
 <style scoped>
-    h4 {
+    h2 {
         color: rgba(0, 0, 0, 0.87);
     }
 </style>
