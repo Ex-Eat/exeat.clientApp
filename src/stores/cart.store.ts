@@ -6,12 +6,11 @@ export const useCartStore = defineStore({
     id: 'cart',
     state: () => ({
         cart: [],
-        isOpened: true
+        isOpened: false
     }),
     getters: {},
     actions: {
         toggleOpen(newState: boolean) {
-            console.log(newState);
             this.isOpened = newState;
         }
     },

@@ -3,6 +3,8 @@ enum routes {
 	LOGIN = '/auth/login',
 	SIGNUP = '/auth/signup',
 	LOGOUT = '/auth/logout',
+
+	ALL_RESTAURANTS = '/restaurant'
 }
 
 export default routes;

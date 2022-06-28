@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <h2 class="text-2xl mb-2">
+    <h2 class="text-3xl mb-2">
         <slot />
     </h2>
 </template>

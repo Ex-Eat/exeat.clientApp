@@ -20,9 +20,9 @@ export default {
 </script>
 
 <template>
-    <div class="container absolute top-[90px] right-0 w-96 shadow-md" :class="{ closed: !isOpened, opened: isOpened }">
+    <div class="container absolute right-0 w-96 shadow-md z-10" :class="{ closed: !isOpened, opened: isOpened }">
         <div class="flex flex-col p-2">
-            <AppH2>Panier ({{ cart.length }})</AppH2>
+            <AppH2>Mon panier ({{ cart.length }})</AppH2>
             <AppDivider />
         </div>
     </div>

@@ -10,7 +10,8 @@ export default {
 <template>
     <NavBar />
 
-    <main class="relative w-[100vw] overflow-hidden">
+    <main class="relative overflow-hidden">
+        <CartContainer/>
         <RouterView />
     </main>
 </template>
