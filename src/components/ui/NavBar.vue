@@ -45,10 +45,7 @@ export default {
 
         <!-- nom -->
         <div class="flex items-left text-center">
-            <div class="px-4">
-                <MenuIcon :height="36" :width="36"/>
-            </div>
-            <div class="">
+            <div class="pl-8">
                 <RouterLink to="/">
                     <span class="font-bold font-mono text-3xl">ex'eat</span>
                 </RouterLink>
@@ -78,11 +75,13 @@ export default {
             </RouterLink>
         </div>
         <div v-else class="flex justify-self-end items-center mr-4 space-x-2">
-            <WhiteButton>
-                <PersonIcon :height="24" :width="24"/>
-                <span>{{ user.username }}</span>
-            </WhiteButton>
-            <PinkButton @click="handleCartOpen(!isOpened)">Panier ({{ cart.length }})</PinkButton>
+            <RouterLink to="/account">
+                <WhiteButton>
+                    <PersonIcon :height="24" :width="24"/>
+                    <span>{{ user.username }}</span>
+                </WhiteButton>
+            </RouterLink>
+            <PinkButton @click="handleCartOpen(!isOpened)">Panier ({{ cart.products?.length }})</PinkButton>
         </div>
     </div>
 </template>

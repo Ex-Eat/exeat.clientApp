@@ -4,7 +4,8 @@ enum routes {
 	SIGNUP = '/auth/signup',
 	LOGOUT = '/auth/logout',
 
-	ALL_RESTAURANTS = '/restaurant'
+	ALL_RESTAURANTS = '/restaurant',
+	GET_CLIENT_GLOBAL_ID = '/client/global'
 }
 
 export default routes;

@@ -1,5 +1,5 @@
 export default interface IArticleDto {
-    id: string;
+    _id: string;
     name: string;
     picture: string;
     description: string

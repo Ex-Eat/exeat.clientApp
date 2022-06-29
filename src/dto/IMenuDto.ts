@@ -1,7 +1,7 @@
 import type IArticleDto from "@/dto/IArticleDto";
 
 export default interface IMenuDto {
-    id: string;
+    _id: string;
     name: string;
     picture: string;
     articles: IArticleDto[]

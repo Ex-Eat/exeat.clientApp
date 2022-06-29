@@ -22,7 +22,7 @@ export default {
 <template>
 	<PageTitle>Bonjour {{ user?.username }}</PageTitle>
     <div class="mt-10 px-[10vw]">
-        <RouterLink to="/restaurants">
+        <RouterLink to="/restaurant">
             <AppH2>Restaurants</AppH2>
         </RouterLink>
         <RestaurantGrid />
