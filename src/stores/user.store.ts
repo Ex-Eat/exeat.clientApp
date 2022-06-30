@@ -6,16 +6,16 @@ export const useUserStore = defineStore({
 	id: 'user',
 	state: () => ({
 		user: null,
-		client: null
+		client: null,
 	}),
 	getters: {},
 	actions: {
 		async loadUser() {
 			try {
 				const user = (await instance.get(routes.LOAD_CONNECTED_USER)).data;
+				this.user = user;
 				const client = (await instance.get(`${routes.GET_CLIENT_GLOBAL_ID}/${user.id}`)).data;
 
-				this.user = user;
 				this.client = client;
 				return { message: 'User successfully loaded' };
 			} catch (error) {
@@ -27,7 +27,7 @@ export const useUserStore = defineStore({
 				const response = await instance.post(routes.LOGIN, {
 					email,
 					password,
-					app: 'client'
+					app: 'client',
 				});
 				this.user = response.data;
 				return { message: 'Successfully authenticated' };
