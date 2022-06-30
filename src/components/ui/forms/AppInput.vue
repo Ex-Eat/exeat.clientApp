@@ -57,7 +57,7 @@ label {
 input:focus + label,
 label.active {
 	top: -10px;
-	left: 12px;
+	left: 17px;
 	transform: scale(0.75);
 	@apply text-primary-700;
 }
