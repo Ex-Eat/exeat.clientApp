@@ -2,8 +2,8 @@
 import PinkButton from '@/components/ui/buttons/PinkButton.vue';
 import AppInput from '@/components/ui/forms/AppInput.vue';
 import AppDivider from '@/components/ui/AppDivider.vue';
-import AppH2 from '@/components/ui/typo/AppH2.vue';
-import { useUserStore } from '@/stores/user';
+import AppH4 from '@/components/ui/typo/AppH2.vue';
+import { useUserStore } from '@/stores/user.store';
 import AppCheckBox from '@/components/ui/forms/AppCheckBox.vue';
 import { differenceInYears } from 'date-fns';
 import { fr } from 'date-fns/locale';
@@ -11,7 +11,7 @@ import Datepicker from 'vue3-datepicker';
 
 export default {
 	name: 'SignupForm',
-	components: { AppCheckBox, Datepicker, PinkButton, AppInput, AppDivider, AppH2 },
+	components: { AppCheckBox, Datepicker, PinkButton, AppInput, AppDivider, AppH4 },
 	setup() {
 		const userStore = useUserStore();
 
@@ -90,7 +90,7 @@ export default {
 	<form @submit="submit">
 		<div class="flex flex-col mx-auto my-12 p-2 shadow-md rounded-lg w-[480px]">
 			<div class="mb-2 text-center">
-				<AppH2>S'inscrire</AppH2>
+				<AppH4>S'inscrire</AppH4>
 			</div>
 			<AppDivider />
 			<div class="grid gap-3 my-4">

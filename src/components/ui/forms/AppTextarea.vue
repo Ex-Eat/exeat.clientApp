@@ -16,10 +16,6 @@ export default {
 			type: String,
 			default: null,
 		},
-		type: {
-			type: String,
-			default: 'text',
-		},
 		required: {
 			type: Boolean,
 			default: false,
@@ -30,13 +26,12 @@ export default {
 
 <template>
 	<div class="relative my-2">
-		<input
+		<textarea
 			v-model="value"
 			:name="name"
-			:type="type"
 			:id="'form-input-' + name"
 			@change="this.$emit('update:value', $event.target.value)"
-			class="rounded-full border px-5 w-full h-[44px] text-sm focus:border-primary-500 focus:border-2 transition focus:px-[19px]"
+			class="rounded-[22px] border px-5 py-2 w-full h-[44px] text-sm focus:border-primary-500 focus:border-2 transition focus:px-[19px]"
 			:class="{ 'border-red-500': error }"
 		/>
 		<label
@@ -54,10 +49,9 @@ label {
 	transition: top 0.2s, left 0.2s, transform 0.2s;
 }
 
-input:focus + label,
+textarea:focus + label,
 label.active {
 	top: -10px;
-	left: 12px;
 	transform: scale(0.75);
 	@apply text-primary-700;
 }

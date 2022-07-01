@@ -1,13 +1,13 @@
 <script>
-import AppH2 from '@/components/ui/typo/AppH2.vue';
+import AppH4 from '@/components/ui/typo/AppH2.vue';
 import AppDivider from '@/components/ui/AppDivider.vue';
 import AppInput from '@/components/ui/forms/AppInput.vue';
 import PinkButton from '@/components/ui/buttons/PinkButton.vue';
-import { useUserStore } from '@/stores/user';
+import { useUserStore } from '@/stores/user.store';
 
 export default {
 	name: 'LoginForm',
-	components: { PinkButton, AppInput, AppDivider, AppH2 },
+	components: { PinkButton, AppInput, AppDivider, AppH4 },
 	setup() {
 		const userStore = useUserStore();
 
@@ -33,7 +33,7 @@ export default {
 	<form @submit="submit">
 		<div class="flex flex-col mx-auto my-12 p-2 shadow-md rounded-lg w-[480px]">
 			<div class="mb-2 text-center">
-				<AppH2>Se connecter</AppH2>
+				<AppH4>Se connecter</AppH4>
 			</div>
 			<AppDivider />
 			<div class="grid gap-3 my-4">

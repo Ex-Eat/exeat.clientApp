@@ -17,17 +17,12 @@ export default {
 	data: () => ({
 		fr,
 	}),
-	methods: {
-		handleChange: (e) => {
-			console.log(e);
-		},
-	},
 };
 </script>
 
 <template>
 	<div class="relative my-2">
-		<Datepicker v-model="date" inputFormat="dd/MM/yyyy" :locale="fr" @change="handleChange" />
+		<Datepicker v-model="date" inputFormat="dd/MM/yyyy" :locale="fr" />
 		<label class="date-picker absolute left-[3px] top-[-10px] cursor-text px-1 bg-white text-sm text-primary-700">{{
 			label
 		}}</label>
